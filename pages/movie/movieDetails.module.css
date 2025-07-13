@@ -1,0 +1,71 @@
+.container {
+  width: 100vw; /* Full viewport width */
+  min-height: 100vh; /* Full viewport height */
+  padding: 1.5rem; 
+  background: #141414; 
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.backButton {
+  display: inline-block;
+  padding: 0.75rem 1.25rem; 
+  background: #333333;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.backButton:hover,
+.backButton:focus {
+  background: #e50914;
+  color: #ffffff;
+}
+
+.backButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.5);
+}
+
+.message {
+  text-align: center;
+  color: #b3b3b3;
+  font-size: 1rem;
+  margin: auto; 
+}
+
+.error {
+  color: #e50914;
+}
+
+.link {
+  color: #e50914;
+  text-decoration: underline;
+}
+
+.link:hover,
+.link:focus {
+  color: #b20710;
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding: 0.75rem;
+  }
+
+  .backButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
