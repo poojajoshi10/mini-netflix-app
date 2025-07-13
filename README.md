@@ -1,75 +1,38 @@
-# Nuxt Minimal Starter
+# Mini Netflix App
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Mini Netflix App is a simple two page nuxt web application that randomly fetches any 5 movies from external API and renders them on UI. 
 
-## Setup
+## Key Points
+Responsive upto 375 px.
 
-Make sure to install dependencies:
+Semantic HTML included.
 
-```bash
-# npm
-npm install
+WCAG accessibility kept in mind.
 
-# pnpm
-pnpm install
+Used CSS Modules for styling
 
-# yarn
-yarn install
+Reusable modules/components like useMovies, MovieThumbnail, MovieDetail etc
 
-# bun
-bun install
-```
+fetch, storing API key in env file rather than hardcoding 
 
-## Development Server
+Nuxt is the only dependency and kept up with the latest version
 
-Start the development server on `http://localhost:3000`:
+## Environment Variable
+Create a `.env` file with:
 
 ```bash
-# npm
-npm run dev
+export OMDB_API_KEY=your_omdb_api_key
+```
+## Build System
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+Provided a node script[scripts/automation.js] that creates minified assets and run local server with watch/hot reload
+```bash
+# Runs both build and local server with hot reload
+npm run automate
 ```
 
-## Production
-
-Build the application for production:
+## How to run created build
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+# Run the created build on any specific port number
+PORT=portNumber node .output/server/index.mjs
